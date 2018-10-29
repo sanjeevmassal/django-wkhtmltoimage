@@ -15,7 +15,7 @@ This requires libfontconfig (on Ubuntu: ``sudo aptitude install libfontconfig``)
 
 Python 2.6+ and 3.3+ are supported.
 
-for HTML to PDF `Use <https://github.com/incuna/django-wkhtmltopdf>`
+for HTML to PDF `use this library <https://github.com/incuna/django-wkhtmltopdf>`_.
 
 Installation
 ------------
