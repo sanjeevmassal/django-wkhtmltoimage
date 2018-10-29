@@ -1,7 +1,7 @@
 django-wkhtmltoimage
 ==================
 
-Converts HTML to PDF
+Converts HTML to Image
 --------------------
 
 Provides Django views to wrap the HTML to Image conversion of the `wkhtmltoimage <http://wkhtmltopdf.org>`_ binary.
@@ -15,6 +15,7 @@ This requires libfontconfig (on Ubuntu: ``sudo aptitude install libfontconfig``)
 
 Python 2.6+ and 3.3+ are supported.
 
+for HTML to PDF `Use <https://github.com/incuna/django-wkhtmltopdf>`
 
 Installation
 ------------
