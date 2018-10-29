@@ -1,4 +1,4 @@
-django-wkhtmltopdf
+django-wkhtmltoimage
 ==================
 
 Converts HTML to PDF
