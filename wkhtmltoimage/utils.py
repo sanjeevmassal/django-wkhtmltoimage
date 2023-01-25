@@ -8,7 +8,7 @@ import sys
 import shlex
 from tempfile import NamedTemporaryFile
 
-from django.utils.encoding import smart_text
+from django.utils.encoding import smart_str
 
 try:
     from urllib.request import pathname2url
@@ -19,8 +19,9 @@ except ImportError:  # Python2
 
 import django
 from django.conf import settings
+from django.template import loader
 from django.template.context import Context, RequestContext
-from django.utils import six
+import six
 
 from .subprocess import check_output
 
@@ -207,7 +208,7 @@ def make_absolute_paths(content):
         occurences = list(set(occurences))  # Remove dups
         for occur in occurences:
             content = content.replace(occur,
-                                      pathname2fileurl(x['root']) + 
+                                      pathname2fileurl(x['root']) +
                                       occur[len(x['url']):])
 
     return content
@@ -227,7 +228,7 @@ def render_to_temporary_file(template, context, request=None, mode='w+b',
     else:
         content = template.render(context, request)
 
-    content = smart_text(content)
+    content = smart_str(content)
     content = make_absolute_paths(content)
 
     try:
